@@ -276,7 +276,7 @@ public:
   } 
   //LogLi -= log(Z);  cout << "LogLi = " << N*LogLi << endl;
   //cout << endl;
-
+  free(P);
   return -LogLi;
  }
 };
@@ -324,7 +324,7 @@ double BoltzmannLearning_Ising(map<uint32_t, unsigned int> Nset, list<Interactio
   cout << niter << " iterations" << std::endl;
   cout << "g = \n" << g.transpose() << std::endl;*/
   //cout << "maxLogLi = " << -maxLogLi << std::endl;
-
+  free(P);
   return -maxLogLi;
 }
 
@@ -366,7 +366,7 @@ public:
     i++;
   } 
   //LogLi -= log(Z);  cout << "LogLi = " << N*LogLi << endl;
-
+  free(P);
   return -LogLi;
  }
 };
@@ -410,7 +410,7 @@ double BoltzmannLearning_ACE(map<uint32_t, unsigned int> Nset, list<Interaction>
 */
   //cout << niter << " iterations" << std::endl;
   //cout << "g = \n" << g.transpose() << std::endl;
-
+  free(P);
   return -maxLogLi;
 }
 
